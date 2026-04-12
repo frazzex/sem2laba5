@@ -1,8 +1,13 @@
 #include <iostream>
+#include <ostream>
+
 #include <string>
+#include <ctime>
+#include <cstdlib>
 
 #include "task1/utils.h"
 #include "task2/utils.h"
+#include "task3/Matrix.h"
 
 using namespace std;
 
@@ -33,11 +38,26 @@ void task2() {
     }
 }
 
+void task3() {
+    Matrix<int> matrix1(3, 3);
+    Matrix<int> matrix2(3, 3);
+    Matrix<int> matrix3{};
+    cout << "Матрица 1:" << endl << matrix1 << endl << endl;
+    cout << "Матрица 2:" << endl << matrix2 << endl << endl;
+    cin >> matrix3;
+    cout << "Матрица 3 (введенная самостоятельно):" << endl << matrix3 << endl << endl;
+    Matrix<int> matrix4 = matrix1 + matrix2;
+    cout << "Сложение матриц 1 и 2:" << endl << matrix4 << endl << endl;
+    Matrix<int> matrix5 = matrix1 * matrix2;
+    cout << "Перемножение матриц 1 и 2:" << endl << matrix5 << endl << endl;
+}
+
 int main() {
+    srand(time(NULL));
     system("chcp 65001");
     setlocale(LC_ALL, "ru");
 
-    task2();
+    task3();
 
     return 0;
 }
