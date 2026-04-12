@@ -8,12 +8,12 @@ using namespace std;
 
 
 template<typename T>
-bool contains(const T desired_el, const T *arr, const size_t arr_size) {
+int contains(const T target_el, const T *arr, const size_t arr_size) {
     for (int i = 0; i < arr_size; i++) {
-        if (arr[i] == desired_el) return true;
+        if (arr[i] == target_el) return i;
     }
 
-    return false;
+    return -1;
 }
 
 
