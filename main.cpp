@@ -8,6 +8,8 @@
 #include "task1/utils.h"
 #include "task2/utils.h"
 #include "task3/Matrix.h"
+#include "task4/Polynomial.h"
+#include "task4/Rational.h"
 
 using namespace std;
 
@@ -52,12 +54,48 @@ void task3() {
     cout << "Перемножение матриц 1 и 2:" << endl << matrix5 << endl << endl;
 }
 
+void task4() {
+    Polynomial poly1 (vector {5, 6});
+    Polynomial poly2 (vector {2, 3, 4});
+    cout << "------ INT многочлен ------" << endl;
+    cout << "Первый многочлен: " << poly1 << endl;
+    cout << "Второй многочлен: " << poly2 << endl << endl;
+
+    cout << "Оператор + : " << (poly1 + poly2) << endl;
+    cout << "Оператор - : " << (poly1 - poly2) << endl;
+    cout << "Оператор * : " << (poly1 * poly2) << endl << endl;
+
+    poly1 += poly2;
+    cout << "Оператор += : " << (poly1) << endl;
+    poly1 -= poly2;
+    cout << "Оператор -= : " << (poly1) << endl;
+    poly1 *= poly2;
+    cout << "Оператор *= : " << (poly1) << endl << endl;
+
+    cout << "Оператор + со скаляром 5 : " << (poly1 + 5) << endl;
+    cout << "Оператор - со скаляром 5 : " << (poly1 - 5) << endl;
+    cout << "Оператор * со скаляром 5 : " << (poly1 * 5) << endl << endl;
+
+    poly1 += 4;
+    cout << "Оператор += со скаляром 4: " << (poly1) << endl;
+
+    poly1 -= 4;
+    cout << "Оператор -= со скаляром 4: " << (poly1) << endl;
+
+    poly1 *= 4;
+    cout << "Оператор *= со скаляром 4: " << (poly1) << endl;
+
+
+
+
+}
+
 int main() {
     srand(time(NULL));
     system("chcp 65001");
     setlocale(LC_ALL, "ru");
 
-    task3();
+    task4();
 
     return 0;
 }

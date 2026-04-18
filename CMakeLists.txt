@@ -9,4 +9,6 @@ add_executable(laba5_2026 main.cpp
         task2/utils.cpp
         task2/utils.h
         task3/Matrix.cpp
-        task3/Matrix.h)
+        task3/Matrix.h
+        task4/Polynomial.cpp
+        task4/Polynomial.h)
